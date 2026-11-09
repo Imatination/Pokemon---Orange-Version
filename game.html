@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Pokémon Orange Version</title>
 <meta name="description" content="Play as Goku in a Pokémon Red adventure. Battle Vegeta and Frieza, ride the Flying Nimbus and train in the Gravity Room. Plays in your browser, on iPhone and on PC.">
 <meta name="theme-color" content="#e8641e">
@@ -29,6 +29,7 @@
 <style>
 html,body{margin:0;height:100%;background:#1b1b2f;color:#eee;font-family:system-ui,sans-serif;}
 body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+*{touch-action:manipulation;-webkit-tap-highlight-color:transparent} #stick{touch-action:none}
 h1{margin:0;font-size:20px;letter-spacing:2px;color:#ffcc33}
 #screen{width:min(480px,94vw);aspect-ratio:160/144;background:#000;image-rendering:pixelated;image-rendering:crisp-edges;border:6px solid #444;border-radius:8px}
 #top{display:flex;align-items:center;gap:10px}
@@ -11297,6 +11298,12 @@ function initNewCanvasSize() {
 </script>
 <script>
 settings[1]=false; settings[12]=false; settings[13]=false;
+// Pokemon Rad: no double-tap zoom (iPhone Safari ignores user-scalable=no), and no pinch zoom
+(function(){var last=0;
+document.addEventListener('touchend',function(e){var t=Date.now(); if(t-last<350) e.preventDefault(); last=t;},{passive:false});
+document.addEventListener('dblclick',function(e){e.preventDefault();},{passive:false});
+['gesturestart','gesturechange','gestureend'].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault();},{passive:false});});
+})();
 // Pokemon Rad: scale the screen by a whole number of real (device) pixels, so every
 // Game Boy pixel is the same size: no blur and no uneven rows that look like scan lines.
 function fitScreen(){

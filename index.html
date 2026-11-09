@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Pokémon Orange Version</title>
 <meta name="description" content="Play as Goku in a Pokémon Red adventure. Battle Vegeta and Frieza, ride the Flying Nimbus and train in the Gravity Room. Plays in your browser, on iPhone and on PC.">
 <meta name="theme-color" content="#e8641e">
@@ -28,7 +28,7 @@
 <meta name="application-name" content="Pokemon - Orange Version">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
-html,body{margin:0;height:100%;background:#1b1b2f;overflow:hidden}
+html,body{margin:0;height:100%;background:#1b1b2f;overflow:hidden;touch-action:manipulation}
 #ldr{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:min(5vh,28px);-webkit-user-select:none;user-select:none}
 .ball{position:relative;width:min(34vmin,170px);height:min(34vmin,170px);border-radius:50%;overflow:hidden;box-sizing:border-box;border:min(1.6vmin,8px) solid #111;
  background:linear-gradient(#e3202a 0,#e3202a 47%,#111 47%,#111 53%,#f4f4f4 53%);box-shadow:0 0 34px #e3202a44,inset -10px -14px 26px #0005;animation:spin 1.6s linear infinite}
@@ -45,7 +45,7 @@ html,body{margin:0;height:100%;background:#1b1b2f;overflow:hidden}
 // downloads the full game with a progress count, then loads it into this same page.
 (function(){var x=document.querySelector('#ldr .tx');
 function show(t){document.open();document.write(t);document.close()}
-fetch('game.html').then(function(r){if(!r.ok)throw new Error(r.status);var n=1828692; // uncompressed size of game.html
+fetch('game.html').then(function(r){if(!r.ok)throw new Error(r.status);var n=1829299; // uncompressed size of game.html
  if(!r.body||!window.TextDecoder)return r.text();
  var rd=r.body.getReader(),dec=new TextDecoder(),parts=[],got=0;
  return (function pump(){return rd.read().then(function(c){if(c.done){parts.push(dec.decode());return parts.join('')}

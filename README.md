@@ -2,7 +2,7 @@
 
 # Pokémon Orange Version
 
-**Play in your browser:** https://imatination.github.io/Pokemon-Orange-Version/
+**Play in your browser:** https://imatination.github.io/Pokemon---Orange-Version/
 
 Play as Goku in a Pokémon Red adventure. Fight alongside Vegeta (and, eventually, Frieza), ride the Flying Nimbus, train in the Gravity Room and take on the Elite Four.
 

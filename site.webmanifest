@@ -1,6 +1,6 @@
 {
-  "name": "Pokémon Orange Version",
-  "short_name": "Orange Version",
+  "name": "Pokemon- Orange Version",
+  "short_name": "Pokemon- Orange Version",
   "start_url": "./",
   "scope": "./",
   "display": "fullscreen",

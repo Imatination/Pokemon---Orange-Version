@@ -38,7 +38,7 @@ Play as Goku in a Pokémon Red adventure. Fight alongside Vegeta (and, eventuall
 | `index.html` | The game, playable in any browser (the ROM is built in) |
 | `pokemon-orange-version.gbc` | The ROM, for a Game Boy flash cart or an emulator |
 | `pokemon-orange-version-source.zip` | Source code (build with [rgbds](https://rgbds.gbdev.io): `make red`) |
-| `preview.jpg`, `cover.jpg`, `icon-*.png`, `apple-touch-icon.png`, `favicon.png`, `site.webmanifest` | Link preview, icons and home-screen app info |
+| `share.png`, `cover.jpg`, `icon-*.png`, `apple-touch-icon.png`, `favicon.png`, `site.webmanifest` | Link preview, icons and home-screen app info |
 
 ## Credits
 

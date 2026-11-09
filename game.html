@@ -11301,6 +11301,7 @@ settings[1]=false; settings[12]=false; settings[13]=false;
 // Pokemon Rad: no double-tap zoom (iPhone Safari ignores user-scalable=no), and no pinch zoom
 (function(){var last=0;
 document.addEventListener('touchend',function(e){var t=Date.now(); if(t-last<350) e.preventDefault(); last=t;},{passive:false});
+document.addEventListener('touchstart',function(e){if(e.touches.length>1) e.preventDefault();},{passive:false});
 document.addEventListener('dblclick',function(e){e.preventDefault();},{passive:false});
 ['gesturestart','gesturechange','gestureend'].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault();},{passive:false});});
 })();

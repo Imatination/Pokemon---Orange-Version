@@ -45,7 +45,7 @@ html,body{margin:0;height:100%;background:#1b1b2f;overflow:hidden;touch-action:m
 // downloads the full game with a progress count, then loads it into this same page.
 (function(){var x=document.querySelector('#ldr .tx');
 function show(t){document.open();document.write(t);document.close()}
-fetch('game.html').then(function(r){if(!r.ok)throw new Error(r.status);var n=1829299; // uncompressed size of game.html
+fetch('game.html',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error(r.status);var n=1829412; // uncompressed size of game.html
  if(!r.body||!window.TextDecoder)return r.text();
  var rd=r.body.getReader(),dec=new TextDecoder(),parts=[],got=0;
  return (function pump(){return rd.read().then(function(c){if(c.done){parts.push(dec.decode());return parts.join('')}
